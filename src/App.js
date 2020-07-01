@@ -3,18 +3,17 @@ import "./App.css";
 import { BrowserRouter, Route } from "react-router-dom";
 
 import HomePage from "./screen/homePage";
-import Nav from "./component/navbar";
+
 import Login from "./screen/login";
 import Register from "./screen/register";
 
 function App() {
   return (
     <BrowserRouter>
-      <Nav />
       <Route path="/home">
         <HomePage />
       </Route>
-      <Route path="/login">
+      <Route exact path="/">
         <Login />
       </Route>
       <Route path="/register">

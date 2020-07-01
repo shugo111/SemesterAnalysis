@@ -3,6 +3,7 @@ import Dropdown from "../component/dropdown";
 import Chart from "../component/charts";
 import Table from "../component/table";
 import { FetchData } from "../data/data";
+import Nav from "../component/navbar";
 
 class HomePage extends Component {
   constructor(props) {
@@ -102,7 +103,11 @@ class HomePage extends Component {
     });
   }
   componentDidUpdate(prevProps, prevState) {
-    if (prevState.dd1 !== this.state.dd1||prevState.dd2 !== this.state.dd2||prevState.dd3 !== this.state.dd3) {
+    if (
+      prevState.dd1 !== this.state.dd1 ||
+      prevState.dd2 !== this.state.dd2 ||
+      prevState.dd3 !== this.state.dd3
+    ) {
       // let url = "https://semdata.rxav.pw/batch/CS/2017/5/summary";
       // this.setState({ url });
       console.log("didupdate");
@@ -154,6 +159,7 @@ class HomePage extends Component {
 
       return (
         <>
+          <Nav />
           <div
             style={{
               maxWidth: "1000px",

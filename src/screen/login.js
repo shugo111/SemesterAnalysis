@@ -21,7 +21,7 @@ class Login extends Component {
           <h4 className="center-align">LOGIN</h4>
         </div>
         <div className="row">
-          <form className="col s12">
+          <form action="/home" className="col s12">
             <div className="row">
               <div className="input-field col s12">
                 <input id="email" type="email" className="validate"></input>
