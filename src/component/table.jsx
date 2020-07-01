@@ -29,7 +29,7 @@ class Table extends Component {
           <td>{data.SubjectCodes[i]}</td>
           <td></td>
           <td>{data[data.SubjectCodes[i]].TotalAttendees}</td>
-          <td>{data[data.SubjectCodes[i]].FailPercentage.toFixed(2)}</td>
+          <td>{data[data.SubjectCodes[i]].Fail}</td>
           <td>{data[data.SubjectCodes[i]].FCD}</td>
           <td>{data[data.SubjectCodes[i]].FC}</td>
           <td>{data[data.SubjectCodes[i]].SC}</td>

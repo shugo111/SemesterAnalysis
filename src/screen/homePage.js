@@ -107,7 +107,7 @@ class HomePage extends Component {
         fcd[i] = result[result.SubjectCodes[i]].FCD;
         fc[i] = result[result.SubjectCodes[i]].FC;
         sc[i] = result[result.SubjectCodes[i]].SC;
-        fail[i] = result[result.SubjectCodes[i]].FailPercentage;
+        fail[i] = result[result.SubjectCodes[i]].Fail;
       }
       this.setState({
         data: result,
@@ -115,6 +115,7 @@ class HomePage extends Component {
         fcd,
         fc,
         sc,
+        fail,
       });
     });
   }
