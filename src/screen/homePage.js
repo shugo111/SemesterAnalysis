@@ -36,6 +36,18 @@ class HomePage extends Component {
           id: 5,
           value: "5",
         },
+        {
+          id: 6,
+          value: "6",
+        },
+        {
+          id: 7,
+          value: "7",
+        },
+        {
+          id: 8,
+          value: "8",
+        },
       ],
       dropitem3: [
         {
