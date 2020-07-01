@@ -74,24 +74,10 @@ class HomePage extends Component {
       sc: [],
       fail: [],
     };
-    // var url = "https://semdata.rxav.pw/batch/"
-    //   .concat(this.state.dd1)
-    //   .concat("/20")
-    //   .concat(this.state.dd3)
-    //   .concat("/")
-    //   .concat(this.state.dd2)
-    //   .concat("/summary");
-    // this.state.url = url;
+    
   }
   componentDidMount() {
-    // GetData(this.state.url).then((result) =>
-    //   this.setState({
-    //     data: result,
-    //     isLoaded: true,
-    //   })
-    // );
-    // let url = "https://semdata.rxav.pw/batch/CS/2017/5/summary";
-    // this.setState({ url });
+   
     console.log("didmount");
 
     FetchData(this.state.dd1, this.state.dd2, this.state.dd3).then((result) => {
@@ -120,8 +106,7 @@ class HomePage extends Component {
       prevState.dd2 !== this.state.dd2 ||
       prevState.dd3 !== this.state.dd3
     ) {
-      // let url = "https://semdata.rxav.pw/batch/CS/2017/5/summary";
-      // this.setState({ url });
+      
       console.log("didupdate");
       FetchData(this.state.dd1, this.state.dd2, this.state.dd3).then(
         (result) => {
@@ -162,13 +147,7 @@ class HomePage extends Component {
     if (!this.state.isLoaded) {
       return <div>Loading...</div>;
     } else {
-      // let url = "20"
-      //   .concat(this.state.dd3)
-      //   .concat("_")
-      //   .concat(this.state.dd2)
-      //   .concat(".csv");
-      // this.state.url = url;
-
+     
       return (
         <>
           <Nav />
