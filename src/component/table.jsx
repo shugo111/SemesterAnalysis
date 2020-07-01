@@ -27,7 +27,7 @@ class Table extends Component {
           <td>{i + 1}</td>
           <td></td>
           <td>{data.SubjectCodes[i]}</td>
-          <td></td>
+          {/* <td></td> */}
           <td>{data[data.SubjectCodes[i]].TotalAttendees}</td>
           <td>{data[data.SubjectCodes[i]].Fail}</td>
           <td>{data[data.SubjectCodes[i]].FCD}</td>
@@ -45,7 +45,7 @@ class Table extends Component {
               <th>Sno</th>
               <th>Subject</th>
               <th>Subject Code</th>
-              <th>Faculty Name</th>
+              {/* <th>Faculty Name</th> */}
               <th>Students appeared</th>
               <th>No of failure</th>
               <th>FCD</th>
