@@ -16,7 +16,7 @@ class Dropdown extends Component {
               <b>{title}:</b>
             </h6>
           ) : (
-            <h6></h6>
+          <h6>{null}</h6>
           )}
         </div>
         <div className="col s1" style={{ margin: "0 50px 0 0" }}>

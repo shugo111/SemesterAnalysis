@@ -61,6 +61,14 @@ class HomePage extends Component {
       sc: [],
       fail: [],
     };
+    // var url = "https://semdata.rxav.pw/batch/"
+    //   .concat(this.state.dd1)
+    //   .concat("/20")
+    //   .concat(this.state.dd3)
+    //   .concat("/")
+    //   .concat(this.state.dd2)
+    //   .concat("/summary");
+    // this.state.url = url;
   }
   componentDidMount() {
     // GetData(this.state.url).then((result) =>
@@ -73,7 +81,7 @@ class HomePage extends Component {
     // this.setState({ url });
     console.log("didmount");
 
-    FetchData(this.state.url).then((result) => {
+    FetchData(this.state.dd1, this.state.dd2, this.state.dd3).then((result) => {
       var fcd = [],
         fc = [],
         sc = [],
@@ -94,29 +102,31 @@ class HomePage extends Component {
     });
   }
   componentDidUpdate(prevProps, prevState) {
-    if (prevState.url !== this.state.url) {
+    if (prevState.dd1 !== this.state.dd1||prevState.dd2 !== this.state.dd2||prevState.dd3 !== this.state.dd3) {
       // let url = "https://semdata.rxav.pw/batch/CS/2017/5/summary";
       // this.setState({ url });
       console.log("didupdate");
-      FetchData(this.state.url).then((result) => {
-        var fcd = [],
-          fc = [],
-          sc = [],
-          fail = [];
-        for (var i = 0; i < result.SubjectCodes.length; i++) {
-          fcd[i] = result[result.SubjectCodes[i]].FCD;
-          fc[i] = result[result.SubjectCodes[i]].FC;
-          sc[i] = result[result.SubjectCodes[i]].SC;
-          fail[i] = result[result.SubjectCodes[i]].FailPercentage;
+      FetchData(this.state.dd1, this.state.dd2, this.state.dd3).then(
+        (result) => {
+          var fcd = [],
+            fc = [],
+            sc = [],
+            fail = [];
+          for (var i = 0; i < result.SubjectCodes.length; i++) {
+            fcd[i] = result[result.SubjectCodes[i]].FCD;
+            fc[i] = result[result.SubjectCodes[i]].FC;
+            sc[i] = result[result.SubjectCodes[i]].SC;
+            fail[i] = result[result.SubjectCodes[i]].FailPercentage;
+          }
+          this.setState({
+            data: result,
+            isLoaded: true,
+            fcd,
+            fc,
+            sc,
+          });
         }
-        this.setState({
-          data: result,
-          isLoaded: true,
-          fcd,
-          fc,
-          sc,
-        });
-      });
+      );
     }
   }
   onSelect1 = (item) => {
@@ -131,14 +141,6 @@ class HomePage extends Component {
 
   render() {
     console.log("render");
-    var url = "https://semdata.rxav.pw/batch/"
-      .concat(this.state.dd1)
-      .concat("/20")
-      .concat(this.state.dd3)
-      .concat("/")
-      .concat(this.state.dd2)
-      .concat("/summary");
-    this.state.url = url;
 
     if (!this.state.isLoaded) {
       return <div>Loading...</div>;
@@ -174,7 +176,7 @@ class HomePage extends Component {
                 selected={this.onSelect3}
                 title="Scheme"
               />
-              <a className="waves-effect waves-light btn">Print</a>
+              <button className="waves-effect waves-light btn">Print</button>
             </div>
             <div className="card z-depth-5" style={{}}>
               <Chart
