@@ -175,7 +175,7 @@ class HomePage extends Component {
                 selected={this.onSelect3}
                 title="Scheme"
               />
-              <a class="waves-effect waves-light btn">Print</a>
+              <a className="waves-effect waves-light btn">Print</a>
             </div>
             <div className="card z-depth-5" style={{}}>
               <Chart

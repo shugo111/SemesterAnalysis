@@ -6,7 +6,7 @@ class Nav extends Component {
   render() {
     return (
       <>
-        <ul id="dropdown1" class="dropdown-content">
+        <ul id="dropdown1" className="dropdown-content">
           <li>
             <a href="#!">Log-Out</a>
           </li>
@@ -20,13 +20,13 @@ class Nav extends Component {
             >
               <i className="material-icons">menu</i>
             </Link>
-            <Link href="#" className="brand-logo">
+            <Link to="#" className="brand-logo">
               Result Analysis
             </Link>
             <ul id="nav-mobile" className="right hide-on-med-and-down">
               <li>
-                <a class="dropdown-trigger" href="#!" data-target="dropdown1">
-                  Shubham<i class="material-icons right">arrow_drop_down</i>
+                <a className="dropdown-trigger" href="#!" data-target="dropdown1">
+                  Shubham<i className="material-icons right">arrow_drop_down</i>
                 </a>
               </li>
             </ul>

@@ -23,7 +23,7 @@ class Table extends Component {
     const items = [];
     for (i = 0; i < data.SubjectCodes.length; i++) {
       items.push(
-        <tr>
+        <tr key={data.SubjectCodes[i]}>
           <td>{i + 1}</td>
           <td></td>
           <td>{data.SubjectCodes[i]}</td>
