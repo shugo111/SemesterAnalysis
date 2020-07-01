@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Dropdown from "../component/dropdown";
-import { GetData } from "../data/homeData";
 import Chart from "../component/charts";
 import Table from "../component/table";
 import { FetchData } from "../data/data";
