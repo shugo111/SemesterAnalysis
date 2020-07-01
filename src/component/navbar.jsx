@@ -25,8 +25,13 @@ class Nav extends Component {
             </Link>
             <ul id="nav-mobile" className="right hide-on-med-and-down">
               <li>
-                <a className="dropdown-trigger" href="#!" data-target="dropdown1">
-                  Shubham<i className="material-icons right">arrow_drop_down</i>
+                <a
+                  className="dropdown-trigger"
+                  href="#!"
+                  data-target="dropdown1"
+                >
+                  abc@cmrit.ac.in
+                  <i className="material-icons right">arrow_drop_down</i>
                 </a>
               </li>
             </ul>

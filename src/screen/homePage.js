@@ -14,6 +14,26 @@ class HomePage extends Component {
           id: 1,
           value: "CS",
         },
+        {
+          id: 2,
+          value: "IS",
+        },
+        {
+          id: 3,
+          value: "ECE",
+        },
+        {
+          id: 4,
+          value: "EEE",
+        },
+        {
+          id: 5,
+          value: "ME",
+        },
+        {
+          id: 6,
+          value: "Civil",
+        },
       ],
       dropitem2: [
         {
@@ -74,10 +94,8 @@ class HomePage extends Component {
       sc: [],
       fail: [],
     };
-    
   }
   componentDidMount() {
-   
     console.log("didmount");
 
     FetchData(this.state.dd1, this.state.dd2, this.state.dd3).then((result) => {
@@ -106,7 +124,6 @@ class HomePage extends Component {
       prevState.dd2 !== this.state.dd2 ||
       prevState.dd3 !== this.state.dd3
     ) {
-      
       console.log("didupdate");
       FetchData(this.state.dd1, this.state.dd2, this.state.dd3).then(
         (result) => {
@@ -147,7 +164,6 @@ class HomePage extends Component {
     if (!this.state.isLoaded) {
       return <div>Loading...</div>;
     } else {
-     
       return (
         <>
           <Nav />
@@ -173,7 +189,18 @@ class HomePage extends Component {
                 selected={this.onSelect3}
                 title="Scheme"
               />
-              <button className="waves-effect waves-light btn">Print</button>
+              <a
+                href={"https://semdata.rxav.pw/batch/"
+                  .concat(this.state.dd1)
+                  .concat("/20")
+                  .concat(this.state.dd3)
+                  .concat("/")
+                  .concat(this.state.dd2)
+                  .concat("/sfile")}
+                className="waves-effect waves-light btn"
+              >
+                Print
+              </a>
             </div>
             <div className="card z-depth-5" style={{}}>
               <Chart
