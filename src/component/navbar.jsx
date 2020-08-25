@@ -36,11 +36,7 @@ class Nav extends Component {
 
             <ul id="nav-mobile" className="right hide-on-med-and-down">
               <li>
-                <a
-                  className="dropdown-trigger"
-                  href="#!"
-                  data-target="profile"
-                >
+                <a className="dropdown-trigger" href="#!" data-target="profile">
                   abc@cmrit.ac.in
                   <i className="material-icons right">arrow_drop_down</i>
                 </a>
@@ -61,8 +57,11 @@ class Nav extends Component {
             </div>
           </li>
           <li>
-            <Link to="#">
+            <Link to="/home">
               <i className="material-icons">cloud</i>Semester Ananlysis
+            </Link>
+            <Link to="/agg">
+              <i className="material-icons">cloud</i>Aggregate
             </Link>
           </li>
         </ul>

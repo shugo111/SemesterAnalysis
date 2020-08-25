@@ -13,3 +13,5 @@ export async function FetchData(dd1, dd2, dd3) {
   //   console.log(data[temp]);
   return data;
 }
+
+
