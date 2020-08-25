@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import _ from "lodash";
 
 class Pagination extends Component {
@@ -19,9 +20,9 @@ class Pagination extends Component {
                 page === currentpage ? "active" : "waves-effect"
               }
             >
-              <a  onClick={() => onPagechange(page)}>
+              <Link onClick={() => onPagechange(page)}>
                 {page}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
