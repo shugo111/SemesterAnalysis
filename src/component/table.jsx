@@ -25,7 +25,7 @@ class Table extends Component {
       items.push(
         <tr key={data.SubjectCodes[i]}>
           <td>{i + 1}</td>
-          <td></td>
+          {/* <td></td> */}
           <td>{data.SubjectCodes[i]}</td>
           {/* <td></td> */}
           <td>{data[data.SubjectCodes[i]].TotalAttendees}</td>
@@ -43,13 +43,13 @@ class Table extends Component {
           <thead>
             <tr>
               <th>Sno</th>
-              <th>Subject</th>
+              {/* <th>Subject</th> */}
               <th>Subject Code</th>
               {/* <th>Faculty Name</th> */}
               <th>Students appeared</th>
               <th>No of failure</th>
               <th>FCD</th>
-              <th>SCD</th>
+              <th>FC</th>
               <th>Second Class</th>
               <th>Pass Percentage</th>
             </tr>

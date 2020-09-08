@@ -3,7 +3,7 @@ import Dropdown from "../component/dropdown";
 import { Link } from "react-router-dom";
 import Nav from "../component/navbar";
 
-class Home extends Component {
+class Aggr extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -33,40 +33,7 @@ class Home extends Component {
           value: "Civil",
         },
       ],
-      dropitem2: [
-        {
-          id: 1,
-          value: "1",
-        },
-        {
-          id: 2,
-          value: "2",
-        },
-        {
-          id: 3,
-          value: "3",
-        },
-        {
-          id: 4,
-          value: "4",
-        },
-        {
-          id: 5,
-          value: "5",
-        },
-        {
-          id: 6,
-          value: "6",
-        },
-        {
-          id: 7,
-          value: "7",
-        },
-        {
-          id: 8,
-          value: "8",
-        },
-      ],
+
       dropitem3: [
         {
           id: 1,
@@ -82,17 +49,13 @@ class Home extends Component {
         },
       ],
       dd1: "CS",
-      dd2: "4",
-      dd3: "17",
+      dd3: "15",
       data: {},
       isLoaded: false,
     };
   }
   onSelect1 = (item) => {
     this.setState({ dd1: item });
-  };
-  onSelect2 = (item) => {
-    this.setState({ dd2: item });
   };
   onSelect3 = (item) => {
     this.setState({ dd3: item });
@@ -117,18 +80,13 @@ class Home extends Component {
             title="Department"
           />
           <Dropdown
-            items={this.state.dropitem2}
-            selected={this.onSelect2}
-            title="Semester"
-          />
-          <Dropdown
             items={this.state.dropitem3}
             selected={this.onSelect3}
             title="Scheme"
           />
           <Link
             className="waves-effect waves-light btn"
-            to={`/${this.props.page}/${this.state.dd1}/${this.state.dd2}/${this.state.dd3}`}
+            to={`/${this.props.page}/${this.state.dd1}/${this.state.dd3}`}
           >
             Submit
           </Link>
@@ -138,4 +96,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Aggr;

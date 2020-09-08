@@ -42,7 +42,7 @@ class Login extends Component {
         <div className="row">
           <img
             alt="logo"
-            src="logo.png"
+            src={require("../images/logo.png")}
             style={{ width: "40%", margin: "0 0 0 30%" }}
           ></img>
           <h4 className="center-align">LOGIN</h4>

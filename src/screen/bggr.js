@@ -3,7 +3,7 @@ import Dropdown from "../component/dropdown";
 import { Link } from "react-router-dom";
 import Nav from "../component/navbar";
 
-class Home extends Component {
+class Bggr extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -70,20 +70,20 @@ class Home extends Component {
       dropitem3: [
         {
           id: 1,
-          value: "15",
+          value: "19",
         },
         {
           id: 2,
-          value: "16",
+          value: "20",
         },
         {
           id: 3,
-          value: "17",
+          value: "21",
         },
       ],
       dd1: "CS",
-      dd2: "4",
-      dd3: "17",
+      dd2: "5",
+      dd3: "19",
       data: {},
       isLoaded: false,
     };
@@ -138,4 +138,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Bggr;

@@ -61,7 +61,10 @@ class Nav extends Component {
               <i className="material-icons">cloud</i>Semester Ananlysis
             </Link>
             <Link to="/agg">
-              <i className="material-icons">cloud</i>Aggregate
+              <i className="material-icons">cloud</i>Academic Performance
+            </Link>
+            <Link to="/bgg">
+              <i className="material-icons">cloud</i>Eligibility List
             </Link>
           </li>
         </ul>

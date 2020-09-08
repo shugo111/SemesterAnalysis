@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import { getdata } from "../services/academicperformance2015";
+import { getdata } from "../services/eligibilityList";
 import Pagination from "../component/pagination";
 import { paginate } from "../component/paginate";
-import MoviesTable from "./aggTable";
+import MoviesTable from "./bggTable";
 import Nav from "../component/navbar";
 import _ from "lodash";
 
-class Agg extends Component {
+class Bgg extends Component {
   state = {
     movies: [],
     genres: [],
@@ -17,8 +17,8 @@ class Agg extends Component {
   };
 
   componentDidMount() {
-    let { dept, scheme } = this.props.match.params;
-    this.setState({ movies: getdata(dept, scheme) });
+    let { dept, sem, scheme } = this.props.match.params;
+    this.setState({ movies: getdata(dept, sem, scheme) });
   }
   handlePage = (page) => {
     this.setState({ currentpage: page });
@@ -75,4 +75,4 @@ class Agg extends Component {
   }
 }
 
-export default Agg;
+export default Bgg;
