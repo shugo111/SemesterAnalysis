@@ -12,40 +12,12 @@ class Aggr extends Component {
           id: 1,
           value: "CS",
         },
-        {
-          id: 2,
-          value: "IS",
-        },
-        {
-          id: 3,
-          value: "ECE",
-        },
-        {
-          id: 4,
-          value: "EEE",
-        },
-        {
-          id: 5,
-          value: "ME",
-        },
-        {
-          id: 6,
-          value: "Civil",
-        },
       ],
 
       dropitem3: [
         {
           id: 1,
           value: "15",
-        },
-        {
-          id: 2,
-          value: "16",
-        },
-        {
-          id: 3,
-          value: "17",
         },
       ],
       dd1: "CS",

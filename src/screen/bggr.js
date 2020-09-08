@@ -12,73 +12,22 @@ class Bggr extends Component {
           id: 1,
           value: "CS",
         },
-        {
-          id: 2,
-          value: "IS",
-        },
-        {
-          id: 3,
-          value: "ECE",
-        },
-        {
-          id: 4,
-          value: "EEE",
-        },
-        {
-          id: 5,
-          value: "ME",
-        },
-        {
-          id: 6,
-          value: "Civil",
-        },
       ],
       dropitem2: [
-        {
-          id: 1,
-          value: "1",
-        },
-        {
-          id: 2,
-          value: "2",
-        },
-        {
-          id: 3,
-          value: "3",
-        },
-        {
-          id: 4,
-          value: "4",
-        },
         {
           id: 5,
           value: "5",
         },
-        {
-          id: 6,
-          value: "6",
-        },
+
         {
           id: 7,
           value: "7",
-        },
-        {
-          id: 8,
-          value: "8",
         },
       ],
       dropitem3: [
         {
           id: 1,
           value: "19",
-        },
-        {
-          id: 2,
-          value: "20",
-        },
-        {
-          id: 3,
-          value: "21",
         },
       ],
       dd1: "CS",
