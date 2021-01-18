@@ -102,6 +102,7 @@ class HomePage extends Component {
     console.log("didmount");
     let { dept, sem, scheme } = this.props.match.params;
     FetchData(dept, sem, scheme).then((result) => {
+      const subjectScores=Object.entries(result.Subjects)
       var fcd = [],
         fc = [],
         sc = [],
@@ -110,15 +111,15 @@ class HomePage extends Component {
         totalfc = 0,
         totalsc = 0,
         totalfail = 0;
-      for (var i = 0; i < result.SubjectCodes.length; i++) {
-        fcd[i] = result[result.SubjectCodes[i]].FCD;
-        fc[i] = result[result.SubjectCodes[i]].FC;
-        sc[i] = result[result.SubjectCodes[i]].SC;
-        fail[i] = result[result.SubjectCodes[i]].Fail;
+      for (var i = 0; i < subjectScores.length; i++) {
+        fcd[i] = subjectScores[i][1].Fcd;
+        fc[i] = subjectScores[i][1].Fc;
+        sc[i] = subjectScores[i][1].Sc;
+        fail[i] =subjectScores[i][1].Failed;
       }
-      totalfcd = result.FCD;
-      totalfc = result.FC;
-      totalsc = result.SC;
+      totalfcd = result.Fcd;
+      totalfc = result.Fc;
+      totalsc = result.Sc;
       totalfail = result.Fail;
       this.setState({
         data: result,
@@ -211,13 +212,14 @@ class HomePage extends Component {
                 title="Scheme"
               /> */}
               <a
-                href={"https://semdata.rxav.pw/batch/"
-                  .concat(dept)
+                href={"https://semdata.rxav.pw/docs/"
                   .concat("/20")
                   .concat(scheme)
                   .concat("/")
+                  .concat(dept)
+                  .concat("/")
                   .concat(sem)
-                  .concat("/sfile")}
+                  .concat("/docx")}
                 className="waves-effect waves-light btn"
               >
                 Print

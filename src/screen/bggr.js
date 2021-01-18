@@ -27,7 +27,23 @@ class Bggr extends Component {
       dropitem3: [
         {
           id: 1,
-          value: "19",
+          value: "2015",
+        },
+        {
+          id: 1,
+          value: "2016",
+        },
+        {
+          id: 1,
+          value: "2017",
+        },
+        {
+          id: 1,
+          value: "2018",
+        },
+        {
+          id: 1,
+          value: "2019",
         },
       ],
       dd1: "CS",
@@ -65,11 +81,11 @@ class Bggr extends Component {
             selected={this.onSelect1}
             title="Department"
           />
-          <Dropdown
+          {/* <Dropdown
             items={this.state.dropitem2}
             selected={this.onSelect2}
             title="Semester"
-          />
+          /> */}
           <Dropdown
             items={this.state.dropitem3}
             selected={this.onSelect3}
@@ -77,7 +93,7 @@ class Bggr extends Component {
           />
           <Link
             className="waves-effect waves-light btn"
-            to={`/${this.props.page}/${this.state.dd1}/${this.state.dd2}/${this.state.dd3}`}
+            to={`/${this.props.page}/${this.state.dd1}/${this.state.dd3}`}
           >
             Submit
           </Link>

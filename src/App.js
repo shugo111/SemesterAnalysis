@@ -10,6 +10,10 @@ import Agg from "./screen/agg";
 import Aggr from "./screen/aggr";
 import Bgg from "./screen/bgg";
 import Bggr from "./screen/bggr";
+import Api from "./screen/api";
+import Scrapper from "./screen/scrapper";
+import Apidoc from "./screen/apiDoc";
+import ScrapperDoc from "./screen/scrapperDoc";
 
 class App extends Component {
   state = {
@@ -34,12 +38,24 @@ class App extends Component {
         </Route>
         <Route path="/resultanalysis/:dept/:sem/:scheme" component={HomePage} />
         <Route path="/ag/:dept/:scheme" component={Agg} />
-        <Route path="/bg/:dept/:sem/:scheme" component={Bgg} />
+        <Route path="/bg/:dept/:scheme" component={Bgg} />
         <Route exact path="/">
           <Login />
         </Route>
         <Route path="/register">
           <Register />
+        </Route>
+        <Route path="/api">
+          <Api />
+        </Route>
+        <Route path="/scrapper">
+          <Scrapper />
+        </Route>
+        <Route path="/scrapperdoc">
+          <ScrapperDoc />
+        </Route>
+        <Route path="/apidoc">
+          <Apidoc />
         </Route>
       </BrowserRouter>
     );

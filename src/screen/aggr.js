@@ -17,11 +17,19 @@ class Aggr extends Component {
       dropitem3: [
         {
           id: 1,
-          value: "15",
+          value: "2015",
+        },
+        {
+          id: 1,
+          value: "2016",
+        },
+        {
+          id: 1,
+          value: "2017",
         },
       ],
       dd1: "CS",
-      dd3: "15",
+      dd3: "2015",
       data: {},
       isLoaded: false,
     };

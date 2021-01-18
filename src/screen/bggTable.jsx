@@ -4,8 +4,8 @@ import Table from "../common/table";
 
 class MoviesTable extends Component {
   columns = [
-    { path: "Slno", label: "SL.NO" },
-    { path: "USN", label: "USN" },
+    // { path: "Slno", label: "SL.NO" },
+    { path: "Usn", label: "USN" },
     { path: "Name", label: "SNAME" },
   ];
   render() {

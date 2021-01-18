@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { getdata } from "../services/eligibilityList";
 import Pagination from "../component/pagination";
 import { paginate } from "../component/paginate";
 import MoviesTable from "./bggTable";
 import Nav from "../component/navbar";
 import _ from "lodash";
+import { FetchDetained } from "../data/data";
 
 class Bgg extends Component {
   state = {
@@ -13,12 +13,16 @@ class Bgg extends Component {
     currentpage: 1,
     selectedGenre: "",
     pageSize: 20,
-    sortColumn: { path: "Slno", order: "asc" },
+    sortColumn: { path: "Usn", order: "asc" },
+    detainedData: [],
   };
 
   componentDidMount() {
-    let { dept, sem, scheme } = this.props.match.params;
-    this.setState({ movies: getdata(dept, sem, scheme) });
+    let { dept, scheme } = this.props.match.params;
+    //this.setState({ movies: getdata(dept, sem, scheme) });
+    FetchDetained(scheme, dept).then((result) => {
+      this.setState({ movies: result });
+    });
   }
   handlePage = (page) => {
     this.setState({ currentpage: page });
@@ -42,7 +46,7 @@ class Bgg extends Component {
   };
   render() {
     if (this.state.movies.length === 0)
-      return <p>There is no movies in the database</p>;
+      return <p>There is no data in the database</p>;
     const { totalCount, data: movies } = this.getPageData();
     return (
       <div>

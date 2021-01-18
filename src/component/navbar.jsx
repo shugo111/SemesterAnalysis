@@ -66,6 +66,18 @@ class Nav extends Component {
             <Link to="/bgg">
               <i className="material-icons">cloud</i>Eligibility List
             </Link>
+            <Link to="/api">
+              <i className="material-icons">cloud</i>Api
+            </Link>
+            <Link to="/scrapper">
+              <i className="material-icons">cloud</i>Scrapper
+            </Link>
+            <Link to="/scrapperdoc">
+              <i className="material-icons">cloud</i>Scrapper Document
+            </Link>
+            <Link to="/apidoc">
+              <i className="material-icons">cloud</i>Api Document
+            </Link>
           </li>
         </ul>
       </>

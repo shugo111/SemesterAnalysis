@@ -126,6 +126,5 @@ var list = {
 };
 export function getdata(dept, sem, year) {
   var str = dept + year + sem;
-  console.log(str);
   return list[str];
 }

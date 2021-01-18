@@ -18,11 +18,11 @@ class Home extends Component {
         },
         {
           id: 3,
-          value: "ECE",
+          value: "EC",
         },
         {
           id: 4,
-          value: "EEE",
+          value: "EE",
         },
         {
           id: 5,
@@ -30,7 +30,7 @@ class Home extends Component {
         },
         {
           id: 6,
-          value: "Civil",
+          value: "CV",
         },
       ],
       dropitem2: [
@@ -80,9 +80,17 @@ class Home extends Component {
           id: 3,
           value: "17",
         },
+        {
+          id: 4,
+          value: "18",
+        },
+        {
+          id: 5,
+          value: "19",
+        },
       ],
       dd1: "CS",
-      dd2: "4",
+      dd2: "5",
       dd3: "17",
       data: {},
       isLoaded: false,

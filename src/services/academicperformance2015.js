@@ -1,5 +1,5 @@
 var data = {
-  CS15: [
+  CS2017: [
     {
       Slno: 1,
       USN: "1CR15CS001",

@@ -7,7 +7,7 @@ class Chart extends Component {
 
     this.state = {
       data: {
-        labels: this.props.totalData.SubjectCodes,
+        labels: Object.keys(this.props.totalData.Subjects),
         datasets: [
           {
             label: `# of failures (${this.props.TOTALFAIL})`,

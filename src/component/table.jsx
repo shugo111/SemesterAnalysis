@@ -5,35 +5,36 @@ class Table extends Component {
     super(props);
     this.state = {
       data: this.props.totalData,
-      subjects: this.props.totalData.SubjectCodes,
+      subjects: Object.keys(this.props.totalData.Subjects),
     };
   }
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.totalData !== this.props.totalData) {
       this.setState({
         data: this.props.totalData,
-        subjects: this.props.totalData.SubjectCodes,
+        subjects: Object.keys(this.props.totalData.Subjects),
       });
     }
   }
   render() {
     const { data } = this.state;
     let i = 0;
-    console.log(data[data.SubjectCodes[0]].TotalAttendees);
+    //console.log(data[data.SubjectCodes[0]].TotalAttendees);
     const items = [];
-    for (i = 0; i < data.SubjectCodes.length; i++) {
+    const subjectScores=Object.entries(data.Subjects)
+    for (i = 0; i < subjectScores.length; i++) {
       items.push(
-        <tr key={data.SubjectCodes[i]}>
+        <tr key={subjectScores[i][0]}>
           <td>{i + 1}</td>
           {/* <td></td> */}
-          <td>{data.SubjectCodes[i]}</td>
+          <td>{subjectScores[i][0]}</td>
           {/* <td></td> */}
-          <td>{data[data.SubjectCodes[i]].TotalAttendees}</td>
-          <td>{data[data.SubjectCodes[i]].Fail}</td>
-          <td>{data[data.SubjectCodes[i]].FCD}</td>
-          <td>{data[data.SubjectCodes[i]].FC}</td>
-          <td>{data[data.SubjectCodes[i]].SC}</td>
-          <td>{data[data.SubjectCodes[i]].PassPercentage.toFixed(2)}</td>
+          <td>{subjectScores[i][1].Appeared}</td>
+          <td>{subjectScores[i][1].Failed}</td>
+          <td>{subjectScores[i][1].Fcd}</td>
+          <td>{subjectScores[i][1].Fc}</td>
+          <td>{subjectScores[i][1].Sc}</td>
+          <td>{subjectScores[i][1].PassPercent}</td>
         </tr>
       );
     }
