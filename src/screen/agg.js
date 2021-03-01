@@ -53,7 +53,7 @@ class Agg extends Component {
   };
   render() {
     if (this.state.data.length === 0)
-      return <p>There is no movies in the database</p>;
+      return <p>There is no Students in the database</p>;
     const { totalCount, data: movies } = this.getPageData();
     return (
       <div>
