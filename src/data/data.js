@@ -25,7 +25,7 @@ export async function FetchSummary(batch, dept) {
   const response = await fetch(url);
   const data = await response.json();
   console.log(data[0].Usn);
-  return data;
+  return data["ScoreDetail"];
 }
 export async function FetchAggregate(batch, dept) {
   var url = "https://semdata.rxav.pw/batch/"
