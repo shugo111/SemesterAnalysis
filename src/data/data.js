@@ -24,7 +24,6 @@ export async function FetchSummary(batch, dept) {
     .concat(dept);
   const response = await fetch(url);
   const data = await response.json();
-  console.log(data[0].Usn);
   return data["ScoreDetail"];
 }
 export async function FetchAggregate(batch, dept) {
